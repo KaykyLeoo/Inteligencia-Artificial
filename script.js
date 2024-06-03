@@ -6,6 +6,13 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
+        let atual = 0;
+let perguntaAtual;
+function mostraPergunta() {
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+mostraPergunta()
         enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
         alternativas: [
             "Isso é assustador!",
@@ -41,10 +48,4 @@ const perguntas = [
         ]
     },
 ];
-let atual = 0;
-let perguntaAtual;
-function mostraPergunta() {
-    perguntaAtual = perguntas[atual];
-    caixaPerguntas.textContent = perguntaAtual.enunciado;
-}
-mostraPergunta()
+
